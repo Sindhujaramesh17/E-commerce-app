@@ -1,0 +1,508 @@
+/*GLOWÉ COSMETICS — SETTINGS*/
+
+.settings-page {
+    min-height: 100%;
+    padding: 36px 40px;
+    box-sizing: border-box;
+    background: #faf8f8;
+    color: #33292d;
+}
+
+/*HEADER*/
+
+.settings-header {
+    margin-bottom: 28px;
+}
+
+.settings-eyebrow {
+    margin: 0 0 7px;
+
+    color: #a36b78;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.settings-header h1 {
+    margin: 0;
+
+    color: #30272a;
+
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+}
+
+.settings-header p:last-child {
+    margin: 8px 0 0;
+
+    color: #82777b;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/*FORM*/
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*SETTINGS CARD*/
+
+.settings-card {
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #eee5e7;
+    border-radius: 13px;
+
+    box-shadow: 0 5px 18px rgba(60, 38, 44, 0.04);
+}
+
+.settings-card-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 23px;
+}
+
+.settings-card-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #f5e7ea;
+    color: #a45d6e;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.settings-card-header h2 {
+    margin: 0;
+
+    color: #3b3034;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.settings-card-header p {
+    margin: 5px 0 0;
+
+    color: #968a8f;
+
+    font-size: 11px;
+}
+
+/*FIELDS*/
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.settings-field label {
+    color: #62555a;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.settings-field input,
+.settings-field select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e4dade;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #44373c;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+    border-color: #bd8190;
+
+    box-shadow:
+        0 0 0 3px rgba(189, 129, 144, 0.11);
+}
+
+.settings-field input:disabled {
+    background: #f8f5f6;
+    color: #94888d;
+    cursor: not-allowed;
+}
+
+/*NOTIFICATIONS*/
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid #f0e9eb;
+}
+
+.notification-item {
+    min-height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 13px 2px;
+
+    border-bottom: 1px solid #f0e9eb;
+
+    cursor: pointer;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.notification-item strong {
+    color: #4b3d42;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.notification-item span {
+    color: #998d92;
+
+    font-size: 10px;
+}
+
+/*CHECKBOX*/
+
+.notification-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    accent-color: #a85f70;
+
+    cursor: pointer;
+}
+
+/*ACTIONS*/
+
+.settings-actions {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.settings-success {
+    color: #56806a;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.settings-save-button {
+    height: 42px;
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #a85f70;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.settings-save-button:hover {
+    background: #914f60;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(168, 95, 112, 0.18);
+}
+
+.settings-save-button:active {
+    transform: translateY(0);
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 800px) {
+    .settings-page {
+        padding: 28px 22px;
+    }
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .settings-page {
+        padding: 24px 18px;
+    }
+
+    .settings-header h1 {
+        font-size: 28px;
+    }
+
+    .settings-card {
+        padding: 19px;
+    }
+}
+
+@media (max-width: 500px) {
+    .settings-actions {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .settings-save-button {
+        width: 100%;
+    }
+
+    .settings-success {
+        text-align: center;
+    }
+
+    .notification-item {
+        align-items: flex-start;
+    }
+}
+/*APPEARANCE*/
+
+.theme-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 16px;
+
+    border: 1px solid #e8dfe2;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.theme-option:hover {
+    border-color: #d5b8c0;
+}
+
+.theme-option.active {
+    border-color: #b97887;
+    background: #fff8f9;
+}
+
+.theme-option input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: #a85f70;
+
+    cursor: pointer;
+}
+
+.theme-option div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.theme-option strong {
+    color: #4b3d42;
+    font-size: 12px;
+}
+
+.theme-option span {
+    color: #998d92;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+[data-theme="dark"] .settings-page {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .settings-header h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .settings-header p:last-child {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .settings-eyebrow {
+    color: var(--accent);
+}
+
+/* Cards */
+
+[data-theme="dark"] .settings-card {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] .settings-card-header h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .settings-card-header p {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .settings-card-icon {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+/* Fields */
+
+[data-theme="dark"] .settings-field label {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .settings-field input,
+[data-theme="dark"] .settings-field select {
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .settings-field input::placeholder {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .settings-field input:disabled {
+    background: #1b1719;
+    color: var(--text-muted);
+    border-color: var(--border-color);
+}
+
+/* Notifications */
+
+[data-theme="dark"] .notification-list {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .notification-item {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .notification-item strong {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .notification-item span {
+    color: var(--text-muted);
+}
+
+/* Theme options */
+
+[data-theme="dark"] .theme-option {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .theme-option:hover {
+    border-color: var(--accent);
+}
+
+[data-theme="dark"] .theme-option.active {
+    background: var(--accent-light);
+    border-color: var(--accent);
+}
+
+[data-theme="dark"] .theme-option strong {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .theme-option span {
+    color: var(--text-muted);
+}
+
+/* Save */
+
+[data-theme="dark"] .settings-success {
+    color: var(--success);
+}
+
+[data-theme="dark"] .settings-field input {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .settings-field input::placeholder {
+    color: var(--text-muted);
+}

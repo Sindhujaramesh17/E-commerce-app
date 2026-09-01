@@ -1,0 +1,62 @@
+.app-layout {
+min-height: 100vh;
+background: var(--bg-primary);
+}
+
+/* Header stays at the top */
+.app-layout > .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Main body */
+.app-body {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar stays on the left */
+.app-body > .app-sidebar {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    bottom: 0;
+
+    width: 240px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 900;
+}
+
+/* Only the content area scrolls */
+.app-content {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    margin-left: 240px;
+    padding-top: 72px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 650px) {
+
+    .app-body > .app-sidebar {
+        width: 70px;
+    }
+
+    .app-content {
+        margin-left: 70px;
+    }
+}

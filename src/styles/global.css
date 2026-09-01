@@ -1,0 +1,132 @@
+:root {
+    --bg-primary: #faf8f8;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-input: #ffffff;
+
+    --text-primary: #30272a;
+    --text-secondary: #82777b;
+    --text-muted: #998d92;
+
+    --border-color: #eee5e7;
+    --border-light: #f0e9eb;
+
+    --accent: #a85f70;
+    --accent-hover: #914f60;
+    --accent-light: #f5e7ea;
+
+    --success: #56806a;
+    --danger: #a24e5d;
+
+    --shadow: 0 5px 18px rgba(60, 38, 44, 0.04);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #171315;
+    --bg-secondary: #211c1f;
+    --bg-card: #272124;
+    --bg-input: #211c1f;
+
+    --text-primary: #f1e7ea;
+    --text-secondary: #c5b7bc;
+    --text-muted: #a99ba0;
+
+    --border-color: #40363a;
+    --border-light: #352c30;
+
+    --accent: #c98294;
+    --accent-hover: #d493a3;
+    --accent-light: #38262c;
+
+    --success: #78a58b;
+    --danger: #d07885;
+
+    --shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.app-layout,
+.app-header,
+.app-sidebar,
+.app-content,
+.dashboard-page,
+.products-page,
+.categories-page,
+.settings-page,
+.product-form-page,
+.stat-card,
+.recent-products-section,
+.category-card,
+.category-add-card,
+.settings-card,
+.product-form-card,
+.product-table-container {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+[data-theme="dark"] .app-layout {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .app-header {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .app-sidebar {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .app-content {
+    background: var(--bg-primary);
+}

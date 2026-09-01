@@ -1,0 +1,173 @@
+/*GLOWÉ COSMETICS — HEADER*/
+
+.app-header {
+    height: 72px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border-bottom: 1px solid #eee5e7;
+
+    box-sizing: border-box;
+}
+
+/*BRAND*/
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.header-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #a85f70;
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 14px rgba(168, 95, 112, 0.18);
+}
+
+.header-brand h2 {
+    margin: 0;
+
+    color: #33292d;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header-brand span {
+    display: block;
+    margin-top: 2px;
+
+    color: #9a8d92;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/*RIGHT SIDE*/
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3e5e8;
+    color: #9a5365;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-info strong {
+    color: #44383d;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.user-info span {
+    color: #a09599;
+    font-size: 10px;
+}
+
+/*LOGOUT*/
+
+.header-logout {
+    height: 36px;
+    padding: 0 14px;
+
+    border: 1px solid #eadfe2;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #806c72;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.header-logout:hover {
+    background: #fff7f8;
+    border-color: #d8c1c7;
+    color: #9a5365;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 650px) {
+    .app-header {
+        padding: 0 18px;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .header-logout {
+        padding: 0 11px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header-brand h2 {
+        font-size: 13px;
+    }
+
+    .header-brand span {
+        display: none;
+    }
+
+    .header-logo {
+        width: 34px;
+        height: 34px;
+    }
+}

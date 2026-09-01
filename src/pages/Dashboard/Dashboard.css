@@ -1,0 +1,581 @@
+/*GLOWE COSMETICS — DASHBOARD*/
+
+.dashboard-page {
+    min-height: 100vh;
+    padding: 36px 40px;
+    background: #faf8f8;
+    color: #2d2528;
+}
+
+/*PAGE HEADER*/
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.dashboard-eyebrow,
+.section-eyebrow {
+    margin: 0 0 7px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #a36b78;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.dashboard-description {
+    margin: 9px 0 0;
+    color: #82777b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*ADD PRODUCT BUTTON*/
+
+.dashboard-add-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #a85f70;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(168, 95, 112, 0.18);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.dashboard-add-button span {
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.dashboard-add-button:hover {
+    background: #914f60;
+    transform: translateY(-2px);
+    box-shadow: 0 11px 24px rgba(168, 95, 112, 0.24);
+}
+
+/*STATISTICS*/
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 34px;
+}
+
+.stat-card {
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #eee5e7;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(60, 38, 44, 0.04);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(60, 38, 44, 0.08);
+}
+
+.stat-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.products-icon {
+    background: #f7e8ec;
+    color: #a85f70;
+}
+
+.categories-icon {
+    background: #eee9f7;
+    color: #79658f;
+}
+
+.stock-icon {
+    background: #fff1df;
+    color: #bd7b35;
+}
+
+.stat-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #9b9094;
+}
+
+.stat-number {
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    color: #30272a;
+}
+
+.stat-description {
+    margin: 9px 0 0;
+    color: #91868a;
+    font-size: 12px;
+}
+
+/*RECENT PRODUCTS SECTION*/
+
+.recent-products-section {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #eee5e7;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(60, 38, 44, 0.04);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 25px;
+    border-bottom: 1px solid #f0e9eb;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.section-header p:last-child {
+    margin: 6px 0 0;
+    color: #93888c;
+    font-size: 12px;
+}
+
+.view-all-link {
+    color: #a85f70;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.view-all-link:hover {
+    color: #814653;
+}
+
+/*TABLE*/
+
+.dashboard-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.dashboard-table th {
+    padding: 14px 20px;
+    background: #fcfafb;
+    border-bottom: 1px solid #f0e9eb;
+    color: #978c90;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dashboard-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f3edef;
+    vertical-align: middle;
+}
+
+.dashboard-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #fdf9fa;
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/*PRODUCT INFORMATION*/
+
+.dashboard-product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 230px;
+}
+
+.dashboard-product-image {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f7f2f3;
+    border: 1px solid #eee5e7;
+}
+
+.dashboard-product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.product-name {
+    display: block;
+    max-width: 220px;
+    overflow: hidden;
+    color: #332b2e;
+    font-size: 13px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-description {
+    display: block;
+    max-width: 220px;
+    margin-top: 4px;
+    overflow: hidden;
+    color: #a0979a;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*SKU*/
+
+.sku {
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #f7f4f5;
+    color: #776d71;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+/*CATEGORY*/
+
+.category-badge {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #f8edf0;
+    color: #98596a;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/*PRICE*/
+
+.product-price {
+    color: #332b2e;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/*STATUS*/
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.status-badge.active {
+    background: #edf8f1;
+    color: #42805a;
+}
+
+.status-badge.active .status-dot {
+    background: #55a66f;
+}
+
+.status-badge.out-of-stock {
+    background: #fff0f0;
+    color: #b65353;
+}
+
+.status-badge.out-of-stock .status-dot {
+    background: #d96666;
+}
+
+/*EMPTY STATE*/
+
+.empty-dashboard {
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #f8e9ed;
+    color: #a85f70;
+    font-size: 24px;
+}
+
+.empty-dashboard h3 {
+    margin: 0;
+    color: #382e32;
+    font-size: 17px;
+}
+
+.empty-dashboard p {
+    margin: 7px 0 20px;
+    color: #978c90;
+    font-size: 13px;
+}
+
+.empty-add-button {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #a85f70;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 900px) {
+    .dashboard-page {
+        padding: 28px 24px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-page {
+        padding: 22px 15px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-add-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .view-all-link {
+        align-self: flex-end;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+}
+
+[data-theme="dark"] .dashboard-page {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dashboard-header h1 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .dashboard-description {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .dashboard-eyebrow,
+[data-theme="dark"] .section-eyebrow {
+    color: var(--accent);
+}
+
+/* Statistics */
+
+[data-theme="dark"] .stat-card {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] .stat-card:hover {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .stat-number {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .stat-description {
+    color: var(--text-muted);
+}
+
+/* Recent Products */
+
+[data-theme="dark"] .recent-products-section {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] .section-header {
+    border-color: var(--border-light);
+}
+
+[data-theme="dark"] .section-header h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .section-header p:last-child {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .view-all-link {
+    color: var(--accent);
+}
+
+/* Table */
+
+[data-theme="dark"] .dashboard-table th {
+    background: var(--bg-secondary);
+    color: #cbbdc2;
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dashboard-table td {
+    border-color: var(--border-light);
+    color: #e8dde0;
+}
+
+[data-theme="dark"] .dashboard-table tbody tr:hover {
+    background: #30272b;
+}
+
+/* Product */
+
+[data-theme="dark"] .dashboard-product-image {
+    background: #30282b;
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .product-name {
+    color: #f5edef;
+}
+
+[data-theme="dark"] .product-description {
+    color: #c9bcc1;
+}
+
+/* SKU */
+
+[data-theme="dark"] .sku {
+    background: #332b2f;
+    color: #ddd1d5;
+}
+
+/* Category */
+
+[data-theme="dark"] .category-badge {
+    background: #3a292f;
+    color: #d995a5;
+}
+
+/* Price */
+
+[data-theme="dark"] .product-price {
+    color: #f5edef;
+}
+
+/* Empty state */
+
+[data-theme="dark"] .empty-dashboard {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .empty-dashboard h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .empty-dashboard p {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .empty-icon {
+    background: var(--accent-light);
+    color: var(--accent);
+}
